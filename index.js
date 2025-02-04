@@ -1,5 +1,6 @@
 import readline from "readline";
 import chalk from "chalk";
+
 readline.emitKeypressEvents(process.stdin);
 process.stdin.setRawMode(true);
 
@@ -34,7 +35,7 @@ function render() {
       if (cell === 0) {
         cellStr = "     ";
       } else {
-        // Colorful numbers with emojis
+        // Colorful numbers
         switch (cell) {
           case 2:
             cellStr = chalk.green(String(cell).padStart(5, " "));
